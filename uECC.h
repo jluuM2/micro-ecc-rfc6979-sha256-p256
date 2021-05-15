@@ -64,7 +64,7 @@ to be word aligned on architectures that do not support unaligned accesses. */
     #define uECC_SUPPORTS_secp256r1 1
 #endif
 #ifndef uECC_SUPPORTS_secp256k1
-    #define uECC_SUPPORTS_secp256k1 0
+    #define uECC_SUPPORTS_secp256k1 1
 #endif
 
 /* Specifies whether compressed point format is supported.

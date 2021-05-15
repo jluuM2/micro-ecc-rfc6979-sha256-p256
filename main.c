@@ -53,7 +53,6 @@ gcc -Wall main.c uECC.c sha256.c hmac.c hmacsha256.c rfc6979sha256p256csprng.c
 
 #include "uECC.h"
 
-/*
 #include <stdio.h>
 void hexdump(uint8_t *k, int len);
 void hexdump(uint8_t *k, int len)
@@ -64,7 +63,6 @@ void hexdump(uint8_t *k, int len)
     }
     printf("\n");
 }
-*/
 
 int main(void)
 {
@@ -82,11 +80,12 @@ int main(void)
 
     rfc6979sha256p256sign(private_key, message_hash, signature);
 
-    /*
-    printf("private_key = "); hexdump(private_key, 32);
-    printf("message_hash = "); hexdump(message_hash, 32);
+    
+    printf("private_key = "); hexdump(private_key, sizeof(private_key));
+    printf("message = "); hexdump(message, sizeof(message));
+    printf("message_hash = "); hexdump(message_hash, sizeof(message_hash));
     printf("signature = \n"); hexdump(signature, 32); hexdump(signature+32, 32);
-    */
+   
 
     return 0;
 }

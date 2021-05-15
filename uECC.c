@@ -1327,7 +1327,7 @@ void rfc6979sha256p256sign(const uint8_t *private_key, const uint8_t *message_ha
 
     uECC_vli_bytesToNative(k, ephemeral_key, 32);
 
-    uECC_sign_with_k(private_key, message_hash, 32, k, signature, uECC_secp256r1());
+    uECC_sign_with_k(private_key, message_hash, 32, k, signature, uECC_secp256k1());
 }
 
 
