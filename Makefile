@@ -11,7 +11,7 @@ all: $(LIB)
 clean:
 	rm -f ${LIB}  ${LIB_OBJS}
 
-main : main.o ${LIB_OBJS}
+main : main.o ${LIB}
 	gcc -o $@ $^
 
 ${DESTINATION_LIB}: ${LIB}
